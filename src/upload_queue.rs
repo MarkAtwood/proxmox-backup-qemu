@@ -159,7 +159,7 @@ async fn upload_handler(
         }
     }
 
-    let mut csum = openssl::sha::Sha256::new();
+    let mut csum = pbs_tools::sha::Sha256::new();
     for digest in index.iter() {
         csum.update(digest);
     }
